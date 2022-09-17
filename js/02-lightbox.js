@@ -31,7 +31,7 @@ function onOpenPictureClick(e) {
 
 let lightboxPicture = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
-  captionType: "attr",
   captionDelay: 250,
+  captionPosition: "bottom",
 });
 lightboxPicture.on("show.simpleLightbox");
