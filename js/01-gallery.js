@@ -1,8 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-console.log(galleryItems);
-
 const galleryRef = document.querySelector(".gallery");
 const gallaryMarkup = galleryCreateMarkup(galleryItems);
 
@@ -42,9 +40,12 @@ function onOpenPictureClick(evt) {
 `);
   instance.show();
 
-  galleryRef.addEventListener("keydown", (evt) => {
+  galleryRef.addEventListener("keydown", onEscKeyPress);
+
+  function onEscKeyPress(evt) {
     if (evt.code === "Escape") {
       instance.close();
+      galleryRef.removeEventListener("keydown", onEscKeyPress);
     }
-  });
+  }
 }
