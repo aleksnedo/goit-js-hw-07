@@ -34,5 +34,4 @@ let lightboxPicture = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
   captionPosition: "bottom",
 });
-
 lightboxPicture.on("show.simpleLightbox");
